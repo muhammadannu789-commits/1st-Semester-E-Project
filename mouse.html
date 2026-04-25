@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+      .category-hero {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 60px 0;
+      }
+
+.category-hero h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.category-hero p {
+  color: #0e0d0d;
+  max-width: 500px;
+  
+}
+.p-set{
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.category-hero .btn {
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-left: 80px!important;
+  
+}
+img{
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .category-hero h1 {
+    font-size: 32px;
+  }
+}
+
+    </style>
+
+    
+</head>
+<body>
+   <!-- Navigation Bar -->
+
+  <nav class="navbar navbar-expand-lg navbar-light " id="top-navbar">
+  <div class="container-xxl">
+      <!-- Logo -->
+       <a class="navbar-brand fw-bold d-lg-none d-block" href="index.html" id="logo2"><i class="bi bi-shop-window"></i> Digital Mart</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" >
+                    <li class="nav-item ms-lg-5  mx-1">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                         <li class="nav-item dropdown d-lg-none d-block" >
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown " id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="monitor.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+           </ul>
+           </li>
+
+          </ul>
+                <button class="btn-set btn  ms-auto mx-2">My Account</button>
+                 <!-- modal -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn-set btn  mx-4 " data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Login 
+</button>            
+
+                <button class="btn-set btn mx-2"><a href="CreateAccount.html">Create Account</a></button>
+     </div>
+   </div>
+   
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form>
+          <input type="email" class="form-control my-3" placeholder="Email" required id="login_email">
+          <input type="password" class="form-control my-3" placeholder="Password" required id="login_password">
+           <i class="fa fa-eye" id="showLoginPassword"></i>
+           <button class="btn btn-warning" id="login">Login</button>
+         </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block  shadow-sm sticky-top" id="bottom-navbar">
+  <div class="container-xxl">
+
+    
+
+    <!-- Toggler Button (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Social Icons -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5  align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-instagram"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-whatsapp"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-youtube-play"></i></a></li>
+
+        <!-- Logo -->
+       <a class="navbar-brand fw-bold" href="index.html" id="logo">
+       <i class="bi bi-shop-window"></i> Digital Mart
+      </a>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="cate-set">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            All Category
+          </a>
+          <ul class="dropdown-menu"  id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="moniter.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <!-- Search -->
+      <form class="d-flex mt-3 mt-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-warning">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!--  Hero Section -->
+<section class="category-hero">
+  <div class="container-xxl">
+    <div class="row align-items-center">
+
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h1 class="fw-bold">Mouse</h1>
+        <p class="p-set">
+          High quality mice for home, office & business use.
+          Wired, wireless & gaming mouses at best prices.
+        </p>
+        <a href="#products" class="btn btn-warning px-4 mx-4">Shop Mouse</a>
+        
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
+        <img src="image/mouse-hero.png" class="img-fluid" alt="Mouses">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- card start -->
+
+<!-- card1 -->
+<div class="container-xxl my-4 p-5">
+    
+  <div class="row my-3">
+  <div class="col-lg-3">
+       <div class="card h-100">
+      <img src="Image2/10.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Logitech G502 Lightspeed Wireless Gaming Mouse 910-005568</h5>
+        <p class="card-text">Logitech G502 Lightspeed Wireless Gaming Mouse 910-005568 HERO 25K Sensor, LIGHTSYNC RGB, 11 Programmable Buttons, Tunable Weight, Black
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 37,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+</div>
+  </div>
+
+      <!-- card2 -->
+    
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Logitech G502 HERO</h5>
+        <p class="card-text">Logitech G502 HERO Wired Gaming Mouse, HERO 25K Sensor, LIGHTSYNC RGB, 11 Programmable Buttons, Tunable Weight, Black</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 10,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+    <!-- card3 -->
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Razer DeathAdder Essential</h5>
+        <p class="card-text">Razer DeathAdder Essential Wired Gaming Mouse - Black | RZ01-03850100 Ergonomic form
+Up to 10 Million Clicks
+5 Hyperesponse Buttons
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 6,500</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+    
+  </div>
+  <!-- card4 -->
+<div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody J95s Gaming Mouse</h5>
+        <p class="card-text">Bloody J95s Gaming Mouse with 2-Fire RGB Animation (Black) - Activated Ultimate gaming gear. 2000 Hz Report Rate. Metal X'Glide Armor Boot.
+BC3332-S Gaming Engine
+Adjustable 8000 CPI
+6 Sniper Modes
+Adjustable X/Y Axis</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 5,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card5 -->
+
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/5.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Logitech G102 Lightsync RGB</h5>
+        <p class="card-text">Logitech G102 Lightsync RGB 6 Button Gaming Mouse | Black - 910-005802
+8,000 Max DPI
+LIGHTSYNC RGB Lighting
+CLASSIC Design
+Dynamic Screen Sampling
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 6,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card6 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/6.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody V8M X'Glide Multi-Core Gaming Mouse</h5>
+        <p class="card-text">Bloody V8M X'Glide Multi-Core Gaming Mouse Armor Boot - Optical Engine
+6 Sniper Modes
+Gaming Precision (3200CPI)
+Ambidextrous Fit</p>
+      </div> 
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 4,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card7 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/7.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">A4Tech FB35CS </h5>
+        <p class="card-text">A4Tech FB35CS Dual Mode Rechargeable Silent Click Wireless Mouse | Smoky Grey Switch up to 3 Devices
+Bluetooth / 2.4G
+2 Thumb Side Buttons
+Type-C Rechargeable Design</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 3,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card8 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/8.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">W60 Max Bloody RGB Gaming Mouse Stone Black</h5>
+      <p class="card-text">W60 Max Bloody RGB Gaming Mouse Stone Black BC3332-A 10K Sensor
+Adjustable 10,000 CPI
+Adjustable LOD
+2000 Hz Report Rate</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 5,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  </div>
+  <div class="row my-">
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/9.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody A60 Light Strike Neon Gaming Mouse </h5>
+        <p class="card-text">Bloody A60 Light Strike Neon Gaming Mouse (Ultra Core 3 and 4 Activated) 6 Sniper Modes
+3 Shooting Modes in Left Button
+Infrared-Wheel
+Click Response Less 0.2 ms</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 5,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card10 -->
+  <div class="col-lg-3">
+       <div class="card h-100">
+      <img src="Image2/17.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">A4Tech FB35CS  </h5>
+        <p class="card-text">A4Tech FB35CS Dual Mode Rechargeable Silent Click Wireless Mouse | Midnight Green
+Switch up to 3 Devices
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 4,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+    </div>
+  </div>
+  <!-- card11 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/11.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">A4tech Fstyler FG12S Panda 1200 DPI Optical Wireless Mouse</h5>
+          <p class="card-text"> A4tech Fstyler FG12S Panda 1200 DPI Optical Wireless Mouse - White 2.4 GHz wireless provides a powerful, reliable connection.
+5M Clicks Lifecycle
+8-in-One
+Widen Wheel
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 3,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/12.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody A70 Light Strike 4000 CPI Gaming Mouse Stone Black </h5>
+        <p class="card-text">Bloody A70 Light Strike 4000 CPI Gaming Mouse Stone Black | Ultra Core 3 and 4 Activated Click Response Less 0.2 ms
+Infrared-Wheel
+3 Shooting Modes in Left Button
+6 Sniper Modes</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 5,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card13 -->
+
+  </div>
+  <div class="row my-">
+
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/13.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Glorious Model D (Glossy Black) Extreme Lightweight Ergonomic Gaming Mouse</h5>
+        <p class="card-text">Glorious Model D (Glossy Black) Extreme Lightweight Ergonomic Gaming Mouse HoneyComb Shell Strength and Comfort
+Ascended Cord Light and Flexible Like it's not even there
+Glide smoothly with G-Skates feet.
+Pixart® 3360 Sensor</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 10,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card14 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/14.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Logitech G305 LIGHTSPEED Wireless Gaming Mouse | Black</h5>
+        <p class="card-text">Logitech G305 LIGHTSPEED Wireless Gaming Mouse | Black Max 12,000 DPI
+6 Buttons Fully Programmable
+1ms Report Rate
+HERO Sensor</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 15,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card15 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/15.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody ES5</h5>
+        <p class="card-text">Bloody ES5 RGB ESports Wired Gaming Mouse 3200 CPI Stone Black 3200 CPI 5-Level Adjustable
+RGB Lighting Effect
+Self-Customize M Button
+Bloody Esports Software</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 3,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card16 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/16.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody L65 Max </h5>
+        <p class="card-text">Bloody L65 Max Lightweight Gaming Mouse RGB Animation 12000 CPI - Ultra Core 3 & 4 Activated | Honeycomb
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 5,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  </div>
+  <!-- card 17 -->
+ 
+  
+  <div class="row my-">
+ <div class="col-lg-3">
+     <div class="card h-100 ">
+      <img src="Image2/1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Logitech G402 Hyperion </h5>
+        <p class="card-text">Logitech G402 Hyperion Fury Ultra-Fast FPS Gaming Mouse with 8 Programmable Buttons and Onboard Memory</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 7,000 </span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+    
+    </div>
+  </div>
+  <!-- card18 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/18.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">SteelSeries Aerox 9 </h5>
+        <p class="card-text">SteelSeries Aerox 9 Wireless Ultra-Lightweight MMO / MOBA Gaming Mouse - 62618
+Water Resistant IP54
+Ultra-Lightweight 89g 
+</p>
+      </div>
+     
+       
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 40,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+ 
+  <!-- card19-->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/19.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody W95 Max</h5>
+        <p class="card-text">Bloody W95 Max RGB Extra Fire Gaming Mouse - Ultra Core 3, 4 Activated - Sportes Red
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 6,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card20 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="Image2/20.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bloody ES7 RGB Esports Gaming Mouse - Black</h5>
+        <p class="card-text">Bloody ES7 RGB Esports Gaming Mouse - Black PixArt Optical Engine
+1,000 Hz Report Rate
+256K Onboard Memory
+6000 CPI - RGB Lighting Effect</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 10,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()">Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+       
+
+
+  <!-- Footer -->
+ <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4">
+                        <i class="bi bi-shop-window"></i> Digital Mart
+                    </h3>
+                    <p>Wellcome To Digital Mart.Online Computer Store in Pakistan.
+                      buy Dell,Lenovo,HP,Acer & More Brands at the best prices in pakistan.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="index.html" class="mb-2">Home</a>
+                        <a href="about.html" class="mb-2">About Us</a>
+                        <a href="FAQs.html" class="mb-2">FAQs</a>
+                        <a href="contactus.html" class="mb-2">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Categories</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="gamingpc.html" class="mb-2">Gaming Pc</a>
+                        <a href="keyboard.html" class="mb-2">Keyboard</a>
+                        <a href="graphic.html" class="mb-2">Graphic Cards</a>
+                        <a href="laptop.html" class="mb-2">Laptops</a>
+                        <a href="printer.html" class="mb-2">Printers</a>
+                        <a href="moniter.html" class="mb-2">Monitors</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>APTECH Computer   Education Federal B Area Block 10 Gulberg Town, Shahrah-e-Pakistan Karachi</p>
+                    <p><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@digitalmart.com</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Copyright -->
+            <div class="copyright">
+                <div class="container text-center">
+                    <p class="mb-0">&copy; 2026 Digital Mart. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+    </footer>
+
+
+
+
+
+
+    
+    
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="Javascript/.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

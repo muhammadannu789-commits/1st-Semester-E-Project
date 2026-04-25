@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="Stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <style>
+      .category-hero {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 60px 0;
+      }
+
+.category-hero h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.category-hero p {
+  color: #0e0d0d;
+  max-width: 500px;
+  
+}
+.p-set{
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.category-hero .btn {
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-left: 80px!important;
+  
+}
+img{
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .category-hero h1 {
+    font-size: 32px;
+  }
+}
+
+    </style>
+    
+</head>
+<body>
+   <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light " id="top-navbar">
+  <div class="container-xxl">
+      <!-- Logo -->
+       <a class="navbar-brand fw-bold d-lg-none d-block" href="index.html" id="logo2"><i class="bi bi-shop-window"></i> Digital Mart</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" >
+                    <li class="nav-item ms-lg-5  mx-1">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                         <li class="nav-item dropdown d-lg-none d-block" >
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown " id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="monitor.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+           </ul>
+           </li>
+
+          </ul>
+                <button class="btn-set btn  ms-auto mx-2">My Account</button>
+                 <!-- modal -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn-set btn  mx-4 " data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Login 
+</button>            
+
+                <button class="btn-set btn mx-2"><a href="CreateAccount.html">Create Account</a></button>
+     </div>
+   </div>
+   
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form>
+          <input type="email" class="form-control my-3" placeholder="Email" required id="login_email">
+          <input type="password" class="form-control my-3" placeholder="Password" required id="login_password">
+           <i class="fa fa-eye" id="showLoginPassword"></i>
+           <button class="btn btn-warning" id="login">Login</button>
+         </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block  shadow-sm sticky-top" id="bottom-navbar">
+  <div class="container-xxl">
+
+    
+
+    <!-- Toggler Button (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Social Icons -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5  align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-instagram"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-whatsapp"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-youtube-play"></i></a></li>
+
+        <!-- Logo -->
+       <a class="navbar-brand fw-bold" href="index.html" id="logo">
+       <i class="bi bi-shop-window"></i> Digital Mart
+      </a>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="cate-set">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            All Category
+          </a>
+          <ul class="dropdown-menu"  id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="moniter.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <!-- Search -->
+      <form class="d-flex mt-3 mt-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-warning">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+
+<!--  Hero Section -->
+<section class="category-hero">
+  <div class="container-xxl">
+    <div class="row align-items-center">
+
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h1 class="fw-bold">Processors</h1>
+        <p class="p-set">
+          High quality processors for home, office & business use.
+          AMD & Intel processors at best prices.
+        </p>
+        <a href="#products" class="btn btn-warning px-4 mx-4">Shop Processors</a>
+        
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
+        <img src="image/processor-hero.png" class="img-fluid" alt="Processors">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- cards -->
+
+<div class="container-xxl my-4A p-5">
+    
+  <div class="row my-3">
+  <div class="col-lg-3">
+
+    <div class="card h-100 ">
+      <img src="image/1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 5 8400F </h5>
+        <p class="card-text">AMD Ryzen 5 8400F PC Gaming Processor | Zen 4 | 6 Cores 12 Threads | AM5 - Tray
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 32,000 </span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+      <!-- card1 -->
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core i5-14400F </h5>
+        <p class="card-text">Intel Core i5-14400F 14h Gen Desktop Processor - 10 Cores - 16 Threads - Tray</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 60,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    <!-- card2 -->
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 5 9600X</h5>
+        <p class="card-text">AMD Ryzen 5 9600X Desktop Processor | Tray | 6C 12T Unlocked - AM5 Zen 5</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 65,000</span>
+    <span class="price"><del> PKR 65,000 </del></span>
+    
+  </div>
+  <button  class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    
+  </div>
+  <!-- card3 -->
+<div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 5 7500F</h5>
+        <p class="card-text">AMD Ryzen 5 7500F Processor, 6-Core 12-Thread Zen 4 CPU, 3.7 GHz Base / Up to 5.0 GHz Boost, Socket AM5, 32 MB L3, DDR5 (Tray)</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 45,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card4 -->
+
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/6.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core i7-12700KF</h5>
+        <p class="card-text">Intel Core i7-12700KF Processor, 12 Cores (8P+4E), 20 Threads, Up to 5.00 GHz, 25MB Cache
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 70,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card5 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/7.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 7 7700</h5>
+        <p class="card-text">AMD Ryzen 7 7700 Unlocked Desktop Processor - Tray - Raphael AM5 Zen 4
+
+ CPU Cores 8
+ Threads 16</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 70,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card6 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/8.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core Ultra 5 235</h5>
+        <p class="card-text">Intel Core Ultra 5 235 Desktop Processor, 14 Cores (6P+8E), 14 Threads, Up to 5.0 GHz, 26MB Cache, Integrated Graphics, Intel AI Boost</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 75,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card7 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/9.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 9</h5>
+      <p class="card-text">AMD Ryzen 9 7900X Desktop Processor - Unlocked, 12-Core - Zen 4, AM5Threads 24
+Max. Boost Clock: Up to 5.6GHz
+AMD Radeon™ Graphics
+Unlocked for Overclocking</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 90,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card8 -->
+  </div>
+  <div class="row my-">
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/10.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core i7-14700 </h5>
+        <p class="card-text">Intel Core i7-14700 Desktop Processor, 20 Cores, 28 Threads, Up To 5.40GHz, 33MB Cache, Intel UHD Graphics 770, Socket FCLGA1700, Tray</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 100,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/11.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 9 9900X </h5>
+        <p class="card-text">AMD Ryzen 9 9900X Processor | Desktop Boxed Processor - Granite Ridge AM5 Zen 5 12C CPU Cores 12 Threads 24
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 130,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/12.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">Intel Core i9-14900KF</h5>
+          <p class="card-text">Intel Core i9-14900KF Desktop Processor | Unlocked | Tray 24 Cores | 32 Threads
+3.2 GHz P-Core Clock Speed
+5.8 GHz Maximum Turbo Boost Frequency
+LGA 1700 Socket
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 150,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card10 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/13.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core Ultra 9</h5>
+        <p class="card-text">Intel Core Ultra 9 285K Desktop Processor, 24C 24T,Total Cores 24 | FCLGA1851
+Total Threads 24
+Max Turbo Frequency 5.7 GHz
+Total L2 Cache 40 MB</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 168,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card11 -->
+
+  </div>
+  <div class="row my-">
+
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/14.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 9 9950X3D</h5>
+        <p class="card-text">AMD Ryzen 9 9950X3D Processor, 16 Cores 32 Threads, 144MB Cache, 170W TDP, Up To 5.7 GHz, AM5 Socket, DDR5, PCIe 5.0, Unlocked for Overclocking</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 225,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/15.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen™ 5 8500G </h5>
+        <p class="card-text">AMD Ryzen™ 5 8500G Desktop Processor CPU Cores 6, Threads 12</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 65,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/16.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 7 5700X3D</h5>
+        <p class="card-text">AMD Ryzen 7 5700X3D Gaming Processor 8-Core, 16-Thread, Tray, Zen 3, AM4, 96 MB (3D V-Cache)</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 71,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card13 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/17.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core Ultra 5 235</h5>
+        <p class="card-text">Intel Core Ultra 5 235 Desktop Processor, 14 Cores (6P+8E), 14 Threads, Up to 5.0 GHz, 26MB Cache, Integrated Graphics, Intel AI Boost, FCLGA1851, Box
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 80,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card 14 -->
+ 
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/18.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 5 3600 </h5>
+        <p class="card-text">AMD Ryzen 5 3600 Desktop Processor 6C 12T Unlocked, Tray AM4, Zen 2 Architecture, Up to 4.2 GHz
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 20,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card15 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/19.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 7 9700X </h5>
+        <p class="card-text">AMD Ryzen 7 9700X Gaming Processor - Box Pack - Granite Ridge AM5 Zen 5 - 8 Cores 16 Threads
+</p>
+      </div>
+     
+       
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 100,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+ 
+  <!-- card16-->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/20.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Intel Core Ultra 7 265K</h5>
+        <p class="card-text">Intel Core Ultra 7 265K Desktop Processor, 20 CoAres, 30MB Cache, Up To 5.5GHz, Socket FCLGA1851, Unlocked, Tray</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 110,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card17 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/21.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AMD Ryzen 7 7800X</h5>
+        <p class="card-text">AMD Ryzen 7 7800X 3D Gaming Processor Socket AM5 Tray</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 105,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+ 
+
+    <!-- Footer -->
+ <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4">
+                        <i class="bi bi-shop-window"></i> Digital Mart
+                    </h3>
+                    <p>Wellcome To Digital Mart.Online Computer Store in Pakistan.
+                      buy Dell,Lenovo,HP,Acer & More Brands at the best prices in pakistan.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="index.html" class="mb-2">Home</a>
+                        <a href="about.html" class="mb-2">About Us</a>
+                        <a href="FAQs.html" class="mb-2">FAQs</a>
+                        <a href="contactus.html" class="mb-2">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Categories</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="gamingpc.html" class="mb-2">Gaming Pc</a>
+                        <a href="keyboard.html" class="mb-2">Keyboard</a>
+                        <a href="graphic.html" class="mb-2">Graphic Cards</a>
+                        <a href="laptop.html" class="mb-2">Laptops</a>
+                        <a href="printer.html" class="mb-2">Printers</a>
+                        <a href="moniter.html" class="mb-2">Monitors</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>APTECH Computer   Education Federal B Area Block 10 Gulberg Town, Shahrah-e-Pakistan Karachi</p>
+                    <p><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@digitalmart.com</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Copyright -->
+            <div class="copyright">
+                <div class="container text-center">
+                    <p class="mb-0">&copy; 2026 Digital Mart. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+    </footer>
+
+
+
+
+
+    
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="Javascript/.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

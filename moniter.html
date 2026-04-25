@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+      .category-hero {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 60px 0;
+      }
+
+.category-hero h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.category-hero p {
+  color: #0e0d0d;
+  max-width: 500px;
+  
+}
+.p-set{
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.category-hero .btn {
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-left: 80px!important;
+  
+}
+img{
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .category-hero h1 {
+    font-size: 32px;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light " id="top-navbar">
+  <div class="container-xxl">
+      <!-- Logo -->
+       <a class="navbar-brand fw-bold d-lg-none d-block" href="index.html" id="logo2"><i class="bi bi-shop-window"></i> Digital Mart</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" >
+                    <li class="nav-item ms-lg-5  mx-1">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                         <li class="nav-item dropdown d-lg-none d-block" >
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown " id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="monitor.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+           </ul>
+           </li>
+
+          </ul>
+                <button class="btn-set btn  ms-auto mx-2">My Account</button>
+                 <!-- modal -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn-set btn  mx-4 " data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Login 
+</button>            
+
+                <button class="btn-set btn mx-2"><a href="CreateAccount.html">Create Account</a></button>
+     </div>
+   </div>
+   
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form>
+          <input type="email" class="form-control my-3" placeholder="Email" required id="login_email">
+          <input type="password" class="form-control my-3" placeholder="Password" required id="login_password">
+           <i class="fa fa-eye" id="showLoginPassword"></i>
+           <button class="btn btn-warning" id="login">Login</button>
+         </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block  shadow-sm sticky-top" id="bottom-navbar">
+  <div class="container-xxl">
+
+    
+
+    <!-- Toggler Button (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Social Icons -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5  align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-instagram"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-whatsapp"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-youtube-play"></i></a></li>
+
+        <!-- Logo -->
+       <a class="navbar-brand fw-bold" href="index.html" id="logo">
+       <i class="bi bi-shop-window"></i> Digital Mart
+      </a>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="cate-set">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            All Category
+          </a>
+          <ul class="dropdown-menu"  id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="moniter.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <!-- Search -->
+      <form class="d-flex mt-3 mt-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-warning">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+ 
+<!--  Hero Section -->
+<section class="category-hero">
+  <div class="container-xxl">
+    <div class="row align-items-center">
+
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h1 class="fw-bold">Moniters</h1>
+        <p class="p-set">
+          High quality monitors for home, office & business use.
+          LCD, LED & OLED monitors at best prices.
+        </p>
+        <a href="#products" class="btn btn-warning px-4 mx-4">Shop Monitors</a>
+        
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
+        <img src="image/monitor-hero.png" class="img-fluid" alt="Monitors">
+      </div>
+
+    </div>
+  </div>
+</section>      
+  
+
+
+<!-- card -->
+<div class="container-xxl my-4 p-5">
+  <div class="row my-">
+  <div class="col-lg-3">
+
+    <div class="card h-100">
+      <img src="images/pc11.png" class="card-img-top" alt="images/Computer.jpg">
+      <div class="card-body">
+        <h5 class="card-title">HP All-in-One 27-cr0015m PC, Windows 11 Home, 27", AMD Ryzen™ 3, 8GB RAM, 256GB SSD, FHD, Jet black</h5>
+        <p class="card-text">Windows 11 Home
+AMD Ryzen™ 3 processor
+AMD Radeon™ Graphics
+8 GB memory;256 GB SSD storage
+27" diagonal FHD display.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$539.99</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+      <!-- card1 -->
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/pc11.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HP All-in-One 27-cr0000m, 27</h5>
+        <p class="card-text">Windows 11 Home
+AMD Ryzen™ 3 7320U (up to 4.1 GHz, 4 MB L3 cache, 4 cores, 8 threads) + AMD Radeon™ Graphics + 8 GB(onboard)
+27" diagonal, FHD (1920 x 1080), IPS, three-sided micro-edge, anti-glare, 300 nits, 99% sRGB Non-touch screen</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$539.99</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    <!-- card2 -->
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src ="images/pc24.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HP 23.8 inch All-in-One Desktop Next Gen AI PC 24-ct2000m</h5>
+        <p class="card-text">Windows 11 Home Standard
+AMD Ryzen™ AI 5 340 (up to 4.8 GHz max boost clock, 16 MB L3 cache, 6 cores, 12 threads) AMD Ryzen™ AI (50 NPU TOPS) + AMD Radeon™ Graphics
+16 GB DDR5-5600 MT/s (2 x 8 GB)
+23.8" diagonal, FHD (1920 x 1080), IPS, three-sided micro-edge, anti-glare, 250 nits, 99% sRGB Non-touch</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$649.99 </span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    
+  </div>
+  <!-- card3 -->
+<div class="col-lg-3">
+    <div class="card h-100">
+      <img src ="images/pc31.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HP OmniStudio X All-in-One Desktop AI 32-c0000t PC 31.5 Intel</h5>
+        <p class="card-text">Windows 11 Home
+Intel® Core™ Ultra 5 125H (up to 4.5 GHz with Intel® Turbo Boost Technology, 18 MB L3 cache, 14 cores, 18 threads) + Intel® Arc™ Graphics
+Integrated Graphics
+16 GB DDR5-5600 MT/s (2 x 8 GB)
+80.01 cm (31.5") diagonal, 4K UHD (3840 x 2160), IPS, three-sided micro-edge, anti-glare, 550 nits, HDR 600, 95% DCI-P3 Non-touch screen</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$1,089.99</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card4 -->
+
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/pc27.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HP 27 inch All-in-One Desktop AI PC 27-cr2000t</h5>
+        <p class="card-text">Windows 11 Pro
+Intel® Core™ Ultra 5 225U (up to 4.8 GHz with Intel® Turbo Boost Technology, 12 MB L3 cache, 12 cores, 14 threads) + Intel® AI Boost (12 NPU TOPS) + Intel® UHD Graphics
+16GB DDR5 5600 MHz RAM (1x16GB)
+27" diagonal, FHD (1920 x 1080), IPS, three-sided micro-edge, anti-glare, 300 nits, 99% sRGB Non-touch screenWindows 11 Pro
+Intel® Core™ Ultra 5 225U (up to 4.8 GHz with Intel® Turbo Boost Technology, 12 MB L3 cache, 12 cores, 14 threads) + Intel® AI Boost (12 NPU TOPS) + Intel® UHD Graphics
+16GB DDR5 5600 MHz RAM (1x16GB)
+27" diagonal, FHD (1920 x 1080), IPS, three-sided micro-edge, anti-glare, 300 nits, 99% sRGB Non-touch screen</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card5 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/pcdell24.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell 24 All-in-One Desktop</h5>
+        <p class="card-text">Compact 24-inch All-in-One for work and play.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$599.99</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card6 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/pcdellpro24.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell Pro 24 All-in-One Plus Desktop</h5>
+        <p class="card-text">Work smarter and collaborate with ease with this AI-ready 24-inch All-in-One featuring an optional 5MP IR camera. Simplify IT with security and manageability features.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$1,839.00</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card7 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/corei5.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HP 24-CR0074D All-in-One PC, 23.8", Intel Core i5-1335U Up To 4.6GHz, 8GB DDR4-3200MT/s, 512GB PCIe NVMe SSD, Intel Iris Xe Graphics, FHD IR Camera, WiFi 6, Windows 11 Home</h5>
+        <p class="card-text">Sleek 23.8-inch All-in-One PC with HP True Vision FHD IR camera, WiFi 6, Bluetooth 5.4, and dual 2W speakers. Features a sustainable design with recycled materials and includes a wireless keyboard and mouse combo.
+
+Intel Core i5-1335U Up To 4.6GHz
+8GB DDR4-3200MT/s, 512GB PCIe NVMe SSD
+23.8" Full HD Display, Intel Iris Xe Graphics
+WiFi 6, Bluetooth 5.4, FHD IR Camera, Windows 11</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$185,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card8 -->
+  </div>
+  <div class="row my-">
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/apple24.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Apple 24" iMac With M4 Chip, Apple M4 8-Core CPU, 16GB Unified RAM, 256GB SSD, 24" 4480 x 2520 Retina Display, Blue</h5>
+        <p class="card-text">Apple 24" iMac with M4 Chip in Blue with a 24" 4480 x 2520 Retina Display, 16GB Unified RAM, and 256GB SSD, plus Magic Keyboard and Magic Mouse.
+
+Apple M4 8-Core CPU, 8-Core GPU, 16-Core Neural Engine
+16GB Unified RAM, 256GB SSD
+24" 4480 x 2520 Retina Display, P3 Color Gamut
+Wi-Fi 6E, Bluetooth 5.3, 2 x Thunderbolt 4</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/imac.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Apple iMac 24" M4 10-Core CPU 24GB 1TB 10-Core GPU | Silver</h5>
+        <p class="card-text">Supercharged with an M4 chip and Apple Intelligence, the Apple 24" iMac delivers performance boosts to everyday activities and intense workloads.
+
+Apple M4 10-Core CPU
+24GB Unified RAM | 1TB SSD
+10-Core GPU | 16-Core Neural Engine
+24" 4480 x 2520 Retina Display</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$840,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/pcAIO.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Lenovo IdeaCentre AIO 24IRH9 Desktop Computer,</h5>
+        <p class="card-text">Lenovo IdeaCentre AIO 24IRH9 Desktop Computer, Intel Core i5-13420H, 8GB RAM, 512GB SSD, 23.8 Inch FHD IPS 100Hz Display, Intel UHD Graphics, ENG-ARAB Keyboard and Mouse, Luna Grey, F0HN000TAX (Official Warranty)</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$199,900</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card10 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="images/HP23.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">HP Series 3 Pro 23.8 inch FHD Monitor - 324pe</h5>
+        <p class="card-text">Stay productive with a fast refresh rate and low response time that keeps your workflow smooth and responsive. Eliminate lag and visual distractions while enjoying crisp clarity and seamless multitasking across tasks and tools.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">$229.00</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card11 -->
+
+  
+</div>
+</div>
+   
+ <!-- Footer -->
+ <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4">
+                        <i class="bi bi-shop-window"></i> Digital Mart
+                    </h3>
+                    <p>Wellcome To Digital Mart.Online Computer Store in Pakistan.
+                      buy Dell,Lenovo,HP,Acer & More Brands at the best prices in pakistan.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="index.html" class="mb-2">Home</a>
+                        <a href="about.html" class="mb-2">About Us</a>
+                        <a href="FAQs.html" class="mb-2">FAQs</a>
+                        <a href="contactus.html" class="mb-2">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Categories</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="gamingpc.html" class="mb-2">Gaming Pc</a>
+                        <a href="keyboard.html" class="mb-2">Keyboard</a>
+                        <a href="graphic.html" class="mb-2">Graphic Cards</a>
+                        <a href="laptop.html" class="mb-2">Laptops</a>
+                        <a href="printer.html" class="mb-2">Printers</a>
+                        <a href="moniter.html" class="mb-2">Monitors</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>APTECH Computer   Education Federal B Area Block 10 Gulberg Town, Shahrah-e-Pakistan Karachi</p>
+                    <p><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@digitalmart.com</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Copyright -->
+            <div class="copyright">
+                <div class="container text-center">
+                    <p class="mb-0">&copy; 2026 Digital Mart. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+    </footer>
+
+
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="Javascript/.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

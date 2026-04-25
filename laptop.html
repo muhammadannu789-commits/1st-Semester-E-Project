@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+      .category-hero {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 60px 0;
+      }
+
+.category-hero h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.category-hero p {
+  color: #0e0d0d;
+  max-width: 500px;
+  
+}
+.p-set{
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.category-hero .btn {
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-left: 80px!important;
+  
+}
+img{
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .category-hero h1 {
+    font-size: 32px;
+  }
+}
+
+    </style>
+    
+</head>
+<body>
+      
+    <!-- Navigation Bar -->
+
+   <nav class="navbar navbar-expand-lg navbar-light " id="top-navbar">
+  <div class="container-xxl">
+      <!-- Logo -->
+       <a class="navbar-brand fw-bold d-lg-none d-block" href="index.html" id="logo2"><i class="bi bi-shop-window"></i> Digital Mart</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" >
+                    <li class="nav-item ms-lg-5  mx-1">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                         <li class="nav-item dropdown d-lg-none d-block" >
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown " id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="monitor.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+           </ul>
+           </li>
+
+          </ul>
+                <button class="btn-set btn  ms-auto mx-2">My Account</button>
+                 <!-- modal -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn-set btn  mx-4 " data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Login 
+</button>            
+
+                <button class="btn-set btn mx-2"><a href="CreateAccount.html">Create Account</a></button>
+     </div>
+   </div>
+   
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form>
+          <input type="email" class="form-control my-3" placeholder="Email" required id="login_email">
+          <input type="password" class="form-control my-3" placeholder="Password" required id="login_password">
+           <i class="fa fa-eye" id="showLoginPassword"></i>
+           <button class="btn btn-warning" id="login">Login</button>
+         </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</nav>
+
+    <!-- Bottom Navigation Bar -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block  shadow-sm sticky-top" id="bottom-navbar">
+  <div class="container-xxl">
+
+    
+
+    <!-- Toggler Button (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Social Icons -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5  align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-instagram"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-whatsapp"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-youtube-play"></i></a></li>
+
+        <!-- Logo -->
+       <a class="navbar-brand fw-bold" href="index.html" id="logo">
+       <i class="bi bi-shop-window"></i> Digital Mart
+      </a>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="cate-set">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            All Category
+          </a>
+          <ul class="dropdown-menu"  id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="moniter.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <!-- Search -->
+      <form class="d-flex mt-3 mt-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-warning">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!--  Hero Section -->
+<section class="category-hero">
+  <div class="container-xxl">
+    <div class="row align-items-center">
+
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h1 class="fw-bold">Laptops</h1>
+        <p class="p-set">
+          High quality laptops for home, office & business use.
+          Gaming, Ultrabook & Business laptops at best prices.
+        </p>
+        <a href="#products" class="btn btn-warning px-4 mx-4">Shop Laptops</a>
+        
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
+        <img src="image/laptop-hero.png" class="img-fluid" alt="Laptops">
+      </div>
+
+    </div>
+  </div>
+</section>    
+
+
+<!-- card -->
+<div class="container-xxl my-4A  p-5">
+  <div class="row my-">
+  <div class="col-lg-3">
+
+    <div class="card h-100">
+      <img src="image/lap16x.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Alienware 16X Aurora Gaming Laptop</h5>
+        <p class="card-text">Essential power. No distractions.
+Must-have gaming performance in a stunning, streamlined design with NVIDIA® GeForce RTX™ 50 Series laptop graphics..</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+      <!-- card1 -->
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/lapxps13.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">XPS 13 Laptop</h5>
+        <p class="card-text">13-inch laptop powered by Intel® Core™ Ultra processors Series 2 that enables new AI experiences.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    <!-- card2 -->
+  </div>
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/lap15.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell 15 Laptop</h5>
+        <p class="card-text">A 15-inch laptop with a built-in camera up to FHD, enlarged ergonomic keyboard and Intel® processors.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    
+  </div>
+  <!-- card3 -->
+<div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/lap14.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell 14 Plus Laptop</h5>
+        <p class="card-text">Enjoy AI experiences and all day battery life - perfect for seamless multitasking and versatile work modes on the go.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card4 -->
+
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell16.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell 16 Laptop</h5>
+        <p class="card-text">Compact 16-inch laptop with a modern design and Intel® Core™ processors and graphics that power effortless productivity and captivating entertainment.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card5 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/lap16plus.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell 16 Plus Laptop</h5>
+        <p class="card-text">Built-in AI with a spacious display - designed for creators and developers who demand performance and style.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card6 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell14plus.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell 14 Plus 2-in-1 Laptop</h5>
+        <p class="card-text">Enjoy AI experiences in versatile modes - perfect for seamless multitasking on the go.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card7 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell16prewhitw.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">White Dell 16 Premium Laptop</h5>
+        <p class="card-text">Our most powerful premium laptop for your most complex creative projects, featuring up to 80W of performance, all-day runtime and a large 16.3-inch display.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card8 -->
+  </div>
+  <div class="row my-">
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell16preblack.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Dell 16 Premium Laptop</h5>
+        <p class="card-text">Our most powerful premium laptop for your most complex creative projects, featuring up to 80W of performance, all-day runtime and a large 16.3-inch display.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell14pre.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Dell 14 Premium Laptop</h5>
+        <p class="card-text">A perfect balance of performance and mobility in an iconic design. With the power of discrete graphics in a 14.5-inch size and up to 20 hours battery life, it's ideal for creators on the go</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/whitedell14pre.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">White Dell 14 Premium Laptop</h5>
+        <p class="card-text">Our most powerful premium laptop for your most complex creative projects, featuring up to 80W of performance, all-day runtime and a large 16.3-inch display.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card10 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell162in1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Dell 16 Plus 2-in-1 Laptop</h5>
+        <p class="card-text">A versatile creative canvas with built-in AI and a spacious display..</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card11 -->
+
+  </div>
+  <div class="row my-">
+
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell162in1whte.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">White Dell 16 Plus 2-in-1 Laptop</h5>
+        <p class="card-text">A versatile creative canvas with built-in AI and a spacious display..</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/Blackdell16.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Dell 16 Laptop</h5>
+        <p class="card-text">Compact 16-inch laptop with a modern design and Intel® Core™ processors and graphics that power effortless productivity and captivating entertainment.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/inspiron142in1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Inspiron 14 2-in-1 Laptop</h5>
+        <p class="card-text">Go wherever curiosity leads you on a 14-inch 2-in-1 with multiple modes, built with AMD Ryzen™ 8040 Series processors and AMD Ryzen™ AI built-in.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card13 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell14pro.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell Pro Max 14 Laptop</h5>
+        <p class="card-text">processor
+AMD Ryzen AI 5 PRO 340 (22MB cache, 6 cores, 12 threads, up to 4.8 GHz max boost, 45W)
+
+operating system
+Windows 11 Pro, Copilot+ PC
+
+videocard
+AMD Radeon Integrated Graphics
+
+memory
+16GB: 1x16GB, LPDDR5x, 8000 MT/s, Dual Channel, non-ECC
+
+hard drive
+256GB, M.2 2230, SSD Gen4, Class 35</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card 14 -->
+ 
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell18pro.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell Pro Max 18 Plus Laptop</h5>
+        <p class="card-text">processor
+Intel® Core™ Ultra 5 processor 245HX, 55W vPro
+
+operating system
+Windows 11 Pro
+
+videocard
+Intel Integrated Graphics
+
+memory
+16GB: 1x16GB 6400 MTs DDR5 CSoDIMM, non-ECC
+
+hard drive
+512 GB SSD, TLC.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card15 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell7680.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Precision 7680 Workstation</h5>
+        <p class="card-text">13th Gen Intel® Core™ i5-13600HX, vPro® (14 cores, up to 4.8 GHz Turbo, 55 W)
+
+operating system
+Windows 11 Pro, English, Brazilian Portuguese, French, Spanish
+
+videocard
+Intel® UHD Graphics
+
+memory
+16GB, 1x16GB 5600MT/s SODIMM, non-ECC
+
+hard drive
+1 TB, M.2 2280, Gen 4 PCIe NVMe, SSD
+
+
+Ports & Slots</p>
+      </div>
+     
+       
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+ 
+  <!-- card16-->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell3591.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Precision 3591 Workstation</h5>
+        <p class="card-text">
+
+Intel® Core™ Ultra 7 165H, vPro® Enterprise (16 cores, up to 5.0 GHz Turbo, 45 W)
+
+operating system
+Windows 11 Pro, English, Brazilian Portuguese, French, Spanish
+(Dell Technologies recommends Windows 11 Pro for business)
+
+videocard
+NVIDIA RTX 1000 Ada Generation, 6 GB GDDR6
+
+memory
+8 GB: 1 x 8 GB, DDR5, 5600 MT/s, non-ECC
+
+hard drive
+256 GB, M.2 2230, Gen 4 PCIe NVMe, SSD, Class 35</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card17 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell3590.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Precision 3590 Workstation</h5>
+        <p class="card-text">
+
+Intel® Core™ Ultra 5 135H, vPro® Enterprise (18MB, 14 cores, 18 threads, up to 4.6 GHz Turbo, 28W)
+
+operating system
+Windows 11 Pro, English, Brazilian Portuguese, French, Spanish
+(Dell Technologies recommends Windows 11 Pro for business)
+
+videocard
+NVIDIA RTX 500 Ada 4GB GDDR6
+
+memory
+8 GB: 1 x 8 GB, DDR5, 5600 MT/s, non-ECC
+
+hard drive
+256 GB, M.2 2230, Gen 4 PCIe NVMe, SSD, Class 35
+
+
+Ports & Slots</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card18 -->
+ 
+  </div>
+  <div class="row my-">
+<div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell3591.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Precision 3591 Workstation</h5>
+        <p class="card-text">
+
+Intel® Core™ Ultra 7 165H, vPro® Enterprise (16 cores, up to 5.0 GHz Turbo, 45 W)
+
+operating system
+Windows 11 Pro, English, Brazilian Portuguese, French, Spanish
+(Dell Technologies recommends Windows 11 Pro for business)
+
+videocard
+NVIDIA RTX 1000 Ada Generation, 6 GB GDDR6
+
+memory
+8 GB: 1 x 8 GB, DDR5, 5600 MT/s, non-ECC
+
+hard drive
+256 GB, M.2 2230, Gen 4 PCIe NVMe, SSD, Class 35</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card19 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dell5690.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Precision 5690 Workstation</h5>
+        <p class="card-text">
+
+processor
+Intel® Core™ Ultra 7 165H, vPro® Enterprise (16 cores, up to 5.0 GHz Turbo, 45 W)
+
+operating system
+Windows 11 Pro, English, Brazilian Portuguese, French, Spanish
+(Dell Technologies recommends Windows 11 Pro for business)
+
+videocard
+NVIDIA® RTX™ 1000 Ada 6GB GDDR6
+
+memory
+32GB LPDDR5x 7467 MT/s
+
+hard drive
+256 GB, M.2 2230, Gen 4 PCIe NVMe, SSD, Class 35</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card20 -->
+  
+       <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dellrugged13.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell Pro Rugged 13 Laptop</h5>
+        <p class="card-text">
+
+Intel® Core™ Ultra 5 135U (12 cores, up to 4.4 GHz, 15 W)
+
+operating system
+Windows 11 Pro
+(Dell Technologies recommends Windows 11 Pro for business)
+
+video card
+Intel® Core™ Ultra 5 135U (12 MB cache, 12 cores, up to 4.40 GHz, 15W), 16 GB memory, Integrated GFX
+
+memory
+16GB: LPDDR5x, 6400 MT/s (onboard)
+
+hard drive
+512 GB, M.2 2230, PCIe NVMe, SSD</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div> 
+  <!-- card21 -->
+   <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="image/dellrugged14.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dell Pro Rugged 14 Laptop</h5>
+        <p class="card-text">
+
+Intel® Core™ Ultra 5 135U (12 cores, up to 4.4 GHz, 15 W)
+
+operating system
+Windows 11 Pro
+(Dell Technologies recommends Windows 11 Pro for business)
+
+video card
+Intel® Core™ Ultra 5 135U (12 MB cache, 12 cores, up to 4.40 GHz, 15W), 16 GB memory, Integrated GFX
+
+memory
+16GB: LPDDR5x, 6400 MT/s (onboard)
+
+hard drive
+512 GB, M.2 2230, PCIe NVMe, SSD</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 285,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div> 
+ 
+  </div>
+</div>
+
+
+<!-- Footer -->
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4">
+                        <i class="bi bi-shop-window"></i> Digital Mart
+                    </h3>
+                    <p>Wellcome To Digital Mart.Online Computer Store in Pakistan.
+                      buy Dell,Lenovo,HP,Acer & More Brands at the best prices in pakistan.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="index.html" class="mb-2">Home</a>
+                        <a href="about.html" class="mb-2">About Us</a>
+                        <a href="FAQs.html" class="mb-2">FAQs</a>
+                        <a href="contactus.html" class="mb-2">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Categories</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="gamingpc.html" class="mb-2">Gaming Pc</a>
+                        <a href="keyboard.html" class="mb-2">Keyboard</a>
+                        <a href="graphic.html" class="mb-2">Graphic Cards</a>
+                        <a href="laptop.html" class="mb-2">Laptops</a>
+                        <a href="printer.html" class="mb-2">Printers</a>
+                        <a href="moniter.html" class="mb-2">Monitors</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>APTECH Computer   Education Federal B Area Block 10 Gulberg Town, Shahrah-e-Pakistan Karachi</p>
+                    <p><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@digitalmart.com</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Copyright -->
+            <div class="copyright">
+                <div class="container text-center">
+                    <p class="mb-0">&copy; 2026 Digital Mart. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+    </footer>
+
+
+
+
+
+
+
+    
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="Javascript/.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

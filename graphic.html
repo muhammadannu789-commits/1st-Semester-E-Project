@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />       
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+       html {
+             --primary-color: #eec305; 
+        } 
+    </style>
+    <style>
+      .category-hero {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 60px 0;
+      }
+
+.category-hero h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.category-hero p {
+  color: #0e0d0d;
+  max-width: 500px;
+  
+}
+.p-set{
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.category-hero .btn {
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-left: 80px!important;
+  
+}
+img{
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .category-hero h1 {
+    font-size: 32px;
+  }
+}
+
+    </style>
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light " id="top-navbar">
+  <div class="container-xxl">
+      <!-- Logo -->
+       <a class="navbar-brand fw-bold d-lg-none d-block" href="index.html" id="logo2"><i class="bi bi-shop-window"></i> Digital Mart</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" >
+                    <li class="nav-item ms-lg-5  mx-1">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="policies.html">Policies</a>
+                    </li>
+                         <li class="nav-item dropdown d-lg-none d-block" >
+          <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown " id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="monitor.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+           </ul>
+           </li>
+
+          </ul>
+                <button class="btn-set btn  ms-auto mx-2">My Account</button>
+                 <!-- modal -->
+ <!-- Button trigger modal -->
+<button type="button" class="btn-set btn  mx-4 " data-bs-toggle="modal" data-bs-target="#LoginModal">
+  Login 
+</button>            
+
+                <button class="btn-set btn mx-2"><a href="CreateAccount.html">Create Account</a></button>
+     </div>
+   </div>
+   
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form>
+          <input type="email" class="form-control my-3" placeholder="Email" required id="login_email">
+          <input type="password" class="form-control my-3" placeholder="Password" required id="login_password">
+           <i class="fa fa-eye" id="showLoginPassword"></i>
+           <button class="btn btn-warning" id="login">Login</button>
+         </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block  shadow-sm sticky-top" id="bottom-navbar">
+  <div class="container-xxl">
+
+    
+
+    <!-- Toggler Button (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!-- Social Icons -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5  align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-instagram"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-whatsapp"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-youtube-play"></i></a></li>
+
+        <!-- Logo -->
+       <a class="navbar-brand fw-bold" href="index.html" id="logo">
+       <i class="bi bi-shop-window"></i> Digital Mart
+      </a>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="cate-set">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            All Category
+          </a>
+          <ul class="dropdown-menu"  id="drowpdown-set">
+            <li><a class="dropdown-item" href="laptop.html">Laptop</a></li>
+            <li><a class="dropdown-item" href="gamingpc.html">Gaming PC</a></li>
+            <li><a class="dropdown-item" href="keyboard.html">Keyboard</a></li>
+            <li><a class="dropdown-item" href="mouse.html">Mouse</a></li>
+            <li><a class="dropdown-item" href="graphic.html">Graphic Cards</a></li>
+            <li><a class="dropdown-item" href="processor.html">Processor</a></li>
+            <li><a class="dropdown-item" href="moniter.html">Monitor</a></li>
+            <li><a class="dropdown-item" href="printer.html">Printer</a></li>
+            <li><a class="dropdown-item" href="headphone.html">Headphones</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <!-- Search -->
+      <form class="d-flex mt-3 mt-lg-0">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-warning">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<!--  Hero Section -->
+<section class="category-hero">
+  <div class="container-xxl">
+    <div class="row align-items-center">
+
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h1 class="fw-bold">Graphic Cards</h1>
+        <p class="p-set">
+          High quality graphic cards for home, office & business use.
+          NVIDIA & AMD graphic cards at best prices.
+        </p>
+        <a href="#products" class="btn btn-warning px-4 mx-4">Shop Graphic Cards</a>
+        
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6 text-center">
+        <img src="image/graphic-hero.png" class="img-fluid" alt="Graphic Cards">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- cards -->
+
+<div class="container-xxl my-4 p-5">
+    
+
+  <div class="row my-3">
+  <div class="col-lg-3 ">
+
+    <div class="card h-100 ">
+      <img src="IMAGE copy/1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ASUS Dual GeForce RTX™ 3050</h5>
+        <p class="card-text">ASUS Dual GeForce RTX™ 3050 OC Edition 6GB GDDR6 Video Graphics Card, NVIDIA Ampere Streaming Multiprocessors, PCI Express 4.0, 96-bit | DUAL-RTX3050-O6G</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 60,000 </span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+</div>
+  </div>
+
+      <!-- card1 -->
+    
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/2.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Gigabyte GeForce RTX 5050</h5>
+        <p class="card-text">Gigabyte GeForce RTX 5050 OC Low Profile 8G Graphics Card, 8GB GDDR6, 128-Bit, Boost 2587MHz, PCIe 5.0, DLSS 4, Model GV-N5050OC-8GL</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 100,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    </div>
+    <!-- card2 -->
+  
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ZOTAC Gaming GeForce RTX 5050</h5>
+        <p class="card-text">ZOTAC Gaming GeForce RTX 5050 Twin Edge Graphics Card, 8GB GDDR6, 128-Bit, PCI Express 5.0 x8, ZT-B50500E-10M</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 120,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    
+  </div>
+  <!-- card3 -->
+<div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/4.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ASRock Radeon RX 9060 XT</h5>
+        <p class="card-text">ASRock Radeon RX 9060 XTSteel Legend, Graphics Card, 3320MHz Boost, 8GB GDDR6, PCIe 5.0, DisplayPort 2.1a, HDMI 2.1b, White</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 140,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card4 -->
+
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/5.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">PNY GeForce RTX 5060</h5>
+        <p class="card-text">PNY GeForce RTX 5060 8GB Dual Fan GPU, 2497MHz Boost Clock, 448GB/s Bandwidth, 128-bit, DLSS 4, Reflex, Ray Tracing, DisplayPort 2.1b x3, HDMI 2.1b, Dual-Slot, VCG50608DFXPB1</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 100,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card5 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/6.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MSI GeForce RTX 5060 Ti</h5>
+        <p class="card-text">MSI GeForce RTX 5060 Ti 8G Gaming Trio OC Graphics Card, 8GB GDDR6, 2647MHz Boost, TRI FROZR 4 Cooling, Metal Backplate</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 150,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card6 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/7.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MSI GeForce RTX 3060 VENTUS 2X 12G OC</h5>
+        <p class="card-text">Graphics Processing Unit	NVIDIA GeForce RTX 3060
+Interface	PCI Express® Gen 4
+Core Clock	Boost: 1807 MHz
+CUDA® Cores	3584
+Memory	12GB GDDR6
+Memory Interface	192-bit
+Memory Speed	15 Gbps
+Outputs	3x DisplayPort (v1.4a), 1x HDMI™ (supports 4K@120Hz as specified in HDMI 2.1)
+Power Connector	8-pin x 1
+Recommended PSU	550 W
+Card Dimensions	235 x 124 x 42 mm</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 100,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card7 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/8.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Gigabyte Radeon™ RX 9060 XT</h5>
+        <p class="card-text">The Gigabyte Radeon RX 9060 XT is a mid-range graphics card based on the AMD RDNA™ 4 architecture, designed primarily for high-performance 1440p and 1080p gaming. It is available in both 8GB and 16GB GDDR6 memory variants, with the 16GB version being highly recommended by users for future-proofing</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 120,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card8 -->
+  </div>
+  <div class="row my-">
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/9.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">PNY GeForce RTX™ 4060Ti</h5>
+        <p class="card-text">The PNY GeForce RTX™ 4060 Ti is a high-performance graphics card available in both 8GB and 16GB GDDR6 memory variants, powered by the efficient NVIDIA Ada Lovelace architecture. It is designed for stellar gaming and accelerated content creation, offering features like DLSS 3 and advanced ray tracing</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 150,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/10.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ASUS Dual GeForce RTX 5070 </h5>
+        <p class="card-text">The ASUS Dual GeForce RTX 5070 is a dual-fan graphics card based on the NVIDIA Blackwell architecture, known for combining powerful thermal performance with a compact design for broad build compatibility.</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 210,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card9 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/11.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">PNY NVIDIA GeForce RTX 5070</h5>
+          <p class="card-text">PNY NVIDIA GeForce RTX 5070 Epic-X ARGB OC Graphics Card, 12GB GDDR7, 192-Bit, Boost 2685MHz, PCIe 5.0, HDMI/DP 2.1, SFF-Ready, Model VCG507012TFXXPB1-O</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 200,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+    </div>
+  </div>
+  <!-- card10 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/12.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ASUS Prime GeForce RTX 5070</h5>
+        <p class="card-text">ASUS Prime GeForce RTX 5070 Graphics Card, 12GB GDDR7, PCIe 5.0, HDMI and DisplayPort 2.1, 2.5-Slot</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 234,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card11 -->
+
+  </div>
+  <div class="row my-">
+
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/13.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ASUS Prime Radeon RX 9070 </h5>
+        <p class="card-text">ASUS Prime Radeon RX 9070 16GB GDDR6 OC Edition Graphics Card, PCIe5.0, 3584 Stream Processors, PRIME-RX9070-O16G</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 250,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/14.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sapphire Pure AMD Radeon RX 9070</h5>
+        <p class="card-text">Sapphire Pure AMD Radeon RX 9070 XT Gaming OC Graphics Card, 16GB GDDR6, Boost Clock Up To 3010MHz, 4096 Stream Processors</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 250,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card12 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/15.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sapphire Nitro+ AMD Radeon RX 9070</h5>
+        <p class="card-text">Sapphire Nitro+ AMD Radeon RX 9070 XT Gaming OC Graphics Card, 16GB GDDR6, Boost Clock Up To 3060MHz, 4096 Stream Processors</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 267,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card13 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/16.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MSI GeForce RTX 5080 </h5>
+        <p class="card-text">MSI GeForce RTX 5080 16G SHADOW 3X OC Video Graphics Card | G5080-16S3C, 16GB GDDR7 256-bit
+</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 360,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card 14 -->
+ 
+  </div>
+  <div class="row my-">
+ <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/17.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MSI GeForce RTX 5080 16G VENTUS 3X OC PLUS</h5>
+        <p class="card-text">MSI GeForce RTX 5080 16G VENTUS 3X OC PLUS Graphics Card, 2655MHz Extreme, 2640MHz Boost, 16GB GDDR7, PCIe Gen5, 256-bit, DisplayPort x3, HDMI x1</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 400,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card15 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/18.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">MSI GeForce RTX 5080 16G INSPIRE 3X</h5>
+        <p class="card-text">MSI GeForce RTX 5080 16G INSPIRE 3X OC Graphics Card, 2655MHz Extreme, 2640MHz Boost, 16GB GDDR7, PCIe Gen5, 256-bit, DisplayPort x3, HDMI x1
+</p>
+      </div>
+     
+       
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 410,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+ 
+  <!-- card16-->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/19.png " class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ZOTAC GAMING GeForce RTX 5080</h5>
+        <p class="card-text">ZOTAC GAMING GeForce RTX 5080 AMP Extreme INFINITY ULTRA 16GB GDDR7 Graphics Card</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 440,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+  </div>
+  <!-- card17 -->
+  <div class="col-lg-3">
+    <div class="card h-100">
+      <img src="IMAGE copy/20.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">ASUS TUF Gaming GeForce RTX 5080</h5>
+        <p class="card-text">ASUS TUF Gaming GeForce RTX 5080 16GB GDDR7 OC Edition, 16GB GDDR7, PCI Express 5.0, 2730 MHz OC, 2700 MHz Boost, 10752 CUDA Cores, 30 Gbps</p>
+      </div>
+      <div class="card-footer">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="price">PKR 500,000</span>
+  </div>
+  <button class="btn btn-warning w-100" onclick="addtocart()" >Shop Now</button>
+</div>
+
+    </div>
+    </div>
+</div>
+</div>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4">
+                        <i class="bi bi-shop-window"></i> Digital Mart
+                    </h3>
+                    <p>Wellcome To Digital Mart.Online Computer Store in Pakistan.
+                      buy Dell,Lenovo,HP,Acer & More Brands at the best prices in pakistan.
+                    </p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="index.html" class="mb-2">Home</a>
+                        <a href="about.html" class="mb-2">About Us</a>
+                        <a href="FAQs.html" class="mb-2">FAQs</a>
+                        <a href="contactus.html" class="mb-2">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-4">Categories</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="gamingpc.html" class="mb-2">Gaming Pc</a>
+                        <a href="keyboard.html" class="mb-2">Keyboard</a>
+                        <a href="graphic.html" class="mb-2">Graphic Cards</a>
+                        <a href="laptop.html" class="mb-2">Laptops</a>
+                        <a href="printer.html" class="mb-2">Printers</a>
+                        <a href="moniter.html" class="mb-2">Monitors</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>APTECH Computer   Education Federal B Area Block 10 Gulberg Town, Shahrah-e-Pakistan Karachi</p>
+                    <p><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@digitalmart.com</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Copyright -->
+            <div class="copyright">
+                <div class="container text-center">
+                    <p class="mb-0">&copy; 2026 Digital Mart. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+    </footer>
+
+        
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="Javascript/.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>
